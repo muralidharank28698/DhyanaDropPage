@@ -46,7 +46,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
+        <div style={{ overflowX: 'hidden', width: '100%', position: 'relative' }}>
+          {children}
+        </div>
       </body>
     </html>
   );

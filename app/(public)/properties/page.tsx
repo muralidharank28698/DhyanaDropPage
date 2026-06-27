@@ -28,31 +28,31 @@ export default function PropertiesPage() {
           </p>
 
           <div style={{ 
-            display: 'flex', gap: 16, padding: '16px 24px', 
-            background: 'var(--bg-secondary)', borderRadius: 'var(--radius-full)',
+            display: 'flex', gap: 8, padding: '12px 16px', 
+            background: 'var(--bg-secondary)', borderRadius: 'var(--radius-xl)',
             border: '1px solid var(--border-color)',
             alignItems: 'center', flexWrap: 'wrap'
           }}>
-            <div style={{ display: 'flex', gap: 12, overflowX: 'auto', paddingBottom: 4, flex: 1 }}>
-              {destinations.map(dest => (
-                <button 
-                  key={dest}
-                  onClick={() => setDestination(dest)}
-                  style={{
-                    padding: '8px 20px', borderRadius: 'var(--radius-full)',
-                    background: destination === dest ? 'var(--color-navy)' : 'transparent',
-                    color: destination === dest ? 'white' : 'var(--text-primary)',
-                    fontWeight: destination === dest ? 600 : 500,
-                    whiteSpace: 'nowrap', transition: 'all var(--transition-fast)'
-                  }}
-                >
-                  {dest}
-                </button>
+            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', flex: 1 }}>
+              {destinations.map((dest, index) => (
+                <div key={dest} style={{ display: 'flex', alignItems: 'center', marginBottom: 4, marginTop: 4 }}>
+                  <button 
+                    onClick={() => setDestination(dest)}
+                    style={{
+                      padding: '6px 16px', borderRadius: 'var(--radius-full)',
+                      background: destination === dest ? 'var(--color-navy)' : 'transparent',
+                      color: destination === dest ? 'white' : 'var(--text-primary)',
+                      fontWeight: destination === dest ? 600 : 500,
+                      whiteSpace: 'nowrap', transition: 'all var(--transition-fast)'
+                    }}
+                  >
+                    {dest}
+                  </button>
+                  {index < destinations.length - 1 && (
+                    <div style={{ width: 1, height: 20, background: 'var(--border-color)', margin: '0 4px' }} />
+                  )}
+                </div>
               ))}
-            </div>
-            
-            <div style={{ display: 'flex', gap: 12, paddingLeft: 16, borderLeft: '1px solid var(--border-color)' }}>
-              <button className="btn btn-outline btn-sm">Filter ⚙️</button>
             </div>
           </div>
         </div>
