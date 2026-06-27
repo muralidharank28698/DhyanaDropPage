@@ -581,3 +581,39 @@ img {
 .table tr:hover td {
   background: var(--bg-secondary);
 }
+
+/* ─── Event Card Layout (Events Page) ─── */
+.event-card-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+}
+
+.event-action-block {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.event-action-block .btn {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .event-card-layout {
+    flex-direction: row;
+  }
+  .event-action-block {
+    justify-content: center;
+    padding-top: 0;
+    padding-left: 24px;
+    border-top: none;
+    border-left: 1px dashed var(--border-color);
+  }
+  .event-action-block .btn {
+    width: auto;
+  }
+}

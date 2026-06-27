@@ -24,7 +24,7 @@ export default function EventsPage() {
             const day = date.getDate();
 
             return (
-              <div key={event.id} className="card" style={{ display: 'flex', gap: 24, padding: 20 }}>
+              <div key={event.id} className="card event-card-layout">
                 {/* Date Block */}
                 <div style={{ width: 80, flexShrink: 0, textAlign: 'center', background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)', padding: '16px 0', border: '1px solid var(--border-color)' }}>
                   <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-teal)', textTransform: 'uppercase' }}>{month}</div>
@@ -33,7 +33,7 @@ export default function EventsPage() {
 
                 {/* Info Block */}
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px' }}>
                     <div>
                       <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-tertiary)', textTransform: 'uppercase', marginBottom: 4 }}>
                         {event.category}
@@ -58,7 +58,7 @@ export default function EventsPage() {
                 </div>
 
                 {/* Action Block */}
-                <div style={{ display: 'flex', alignItems: 'center', paddingLeft: 24, borderLeft: '1px dashed var(--border-color)' }}>
+                <div className="event-action-block">
                     <button className="btn btn-outline" style={{ whiteSpace: 'nowrap' }}>Get Tickets</button>
                 </div>
               </div>
