@@ -93,7 +93,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+
   width: 100%;
 }
 
@@ -104,7 +104,7 @@ body {
   line-height: 1.6;
   font-size: 16px;
   transition: background var(--transition-base), color var(--transition-base);
-  overflow-x: hidden;
+
   width: 100%;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -502,6 +502,7 @@ img {
   top: 0;
   height: 100vh;
   overflow-y: auto;
+  align-self: start;
 }
 
 .dashboard-content {

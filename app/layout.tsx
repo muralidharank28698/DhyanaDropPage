@@ -46,7 +46,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div style={{ overflowX: 'hidden', width: '100%', position: 'relative' }}>
+        <div style={{ width: '100%', position: 'relative' }}>
           {children}
         </div>
       </body>
