@@ -21,11 +21,16 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
               <div style={{
                 width: 36, height: 36, borderRadius: 'var(--radius-md)',
-                background: 'linear-gradient(135deg, var(--color-teal), var(--color-gold))',
+                background: 'var(--color-navy-light)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: 'white',
               }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#footGrad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <defs>
+                    <linearGradient id="footGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style={{ stopColor: '#2A9D8F', stopOpacity: 1 }} />
+                      <stop offset="100%" style={{ stopColor: '#D4A853', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
                   <path d="M12 3c-1.5 3-4 4.5-6 5 0 5 2.5 9 6 13 3.5-4 6-8 6-13-2-.5-4.5-2-6-5Z"></path>
                 </svg>
               </div>
